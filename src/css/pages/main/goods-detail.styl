@@ -1,0 +1,242 @@
+
+goods-border()
+  border: 1px solid $color_gray_border;
+h3{
+  color: $color_black_title;
+}
+  .page{
+    position: relative;
+  }
+.good-detail-section{
+    background: #fff;
+  padding: 15*$px;
+  border-top: 1px solid $color_gray_border;
+}
+.goods-dispatch-information-section{
+  padding-top: 18*$px;
+  border-top: 1px dashed $color_gray_border;
+  border-bottom: 1px dashed $color_gray_border;
+}
+.detail-dec-section{
+  & p{
+    color: $color_gray_summary;
+  }
+}
+.number-content{
+  margin-top: 23*$px;
+}
+
+.good-title-p{
+  &:after{
+    display: block;
+    content: " ";
+    clear: both;
+  }
+}
+.slide-section{
+  position: relative;
+  .favorite-icon{
+    width: 23*$px;
+    height: 21*$px;
+    position: absolute;
+    right: 20*$px;
+    top: 20*$px;
+    background-image: url('../images/common/follow.png');
+    background-repeat: no-repeat;
+    &._active{
+      background-image: url('../images/common/follow-active.png');
+    }
+  }
+}
+.title-content{
+  height: 40*$px;
+  line-height: 40*$px;
+  border: 1px solid $color_gray_border;
+  position: relative;
+  & span{
+    margin-right: 6*$px;
+  }
+  &:after{
+    display: block;
+    content: " ";
+    position: absolute;
+    right: 12*$px;
+    top: 14*$px;
+    width: 10*$px;
+    height: 10*$px;
+    background: url(../images/common/arrow-down.png) no-repeat center center;
+  }
+}
+.favourable—price{
+    color: $color_gold ;
+}
+.title-price{
+  float: left;
+}
+.address-picker-name{
+  margin-left: 3px;
+}
+.choice-checkbox-list{
+  float: left;
+  width: 100%;
+  margin-left: 1px;
+  &:after{
+    display : block;
+    content: " ";
+    clear: both;
+  }
+    & li{
+      box-sizing: border-box;
+      float: left;
+      width: 45%;
+      height: 40 *$px;
+      border: 1px solid $color_gray_border;
+      text-align: center;
+      line-height: 40 *$px;
+      margin-right: 10px;
+      margin-bottom: 15*$px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      position: relative;
+      &.active {
+        border: 1px solid $color_gold;
+        color: $color_gold;
+      }
+      &.active:after{
+        display: block;
+        content: " ";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 16px;
+        height: 16px;
+        background: url(../images/common/check-active.png) no-repeat center center;
+      }
+      &:nth-child(even){
+        margin-right: 0;
+      }
+    }
+}
+.choice-disabled {
+    border: 1px solid $color_gray_border;
+    color: $color_gray_label
+}
+.ui-choice{
+  float: left;
+  width: 20%;
+  text-align:center;
+  height: 40*$px;
+  border: 1px solid $color_gray_border;
+}
+.ui-none-border{
+  border: none;
+}
+/*颜色*/
+.color-light-orange{
+  color: $color_gold;
+}
+/*fix footer nav*/
+.nav-btn{
+  text-align :center;
+  color: $color_gray_summary;
+  goods-border();
+}
+.nav-btn.put-in-cart{
+  background: $color_blackred;
+  color: #fff;
+}
+
+
+.address-page{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 800;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.address-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  margin-left: -40%;
+  margin-top: -40%;
+  background: #fff;
+}
+.show-address-picker{
+  display: block;
+}
+.hide-address-picker{
+  display: none;
+}
+
+
+.more-good-detail-section{
+  padding: 20*$px;
+
+}
+.more-detail{
+  border-bottom: 1px solid $color_gray_border;
+  padding-bottom: 10*$px;
+  margin-bottom: 15*$px;
+  h3{
+    font-size: 14*$px
+    margin-bottom: 10*$px
+  }
+  p{
+    line-height: 24*$px;
+    span{
+      font-size: 12*$px;
+      color: $color_gray_summary;
+    }
+  }
+  .more-detail-list{
+    li{
+      margin-top: 1*$px;
+      img{
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.more-detail:last-child {
+    border-bottom: none;
+}
+
+.del-line
+    text-decoration: line-through;
+    color: $color_gray_label;
+
+.nav-btn-smallbtn
+    display: block;
+    text-align: center;
+    position: relative;
+    color: #7d7d7d;
+    top: -7px;
+    .lite-cart{
+        display: block;
+        width: 16*$px;
+        height: 16*$px;
+        border-radius: 100%;
+        background: none;
+        position: absolute;
+        top: 10*$px;
+        line-height: 16*$px;
+        font-size: 12*$px;
+        color: #fff;
+        right:-3*$px;
+    }
+
+.nav-btn-smallbtn-icon
+    height 18*$px
+
+.nav-btn-smallbtn-text
+    font-size: 12*$px;
+
+.nav-btn-panel
+    padding 0 5*$px

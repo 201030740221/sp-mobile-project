@@ -1,0 +1,85 @@
+/***
+* form-box
+* Author: Remiel.
+***/
+.form-box
+    background: #fff
+    overflow: hidden
+    display: block
+
+    .icon-arrowright
+        font-size: 24 *$px
+        position: absolute
+        right: 0
+        top: 0
+        bottom: 0
+        width: 1em
+        height: 1em
+        margin: auto
+        padding: 0
+
+.form-box,
+.form-box-hd,
+.form-box-bd
+    position: relative
+
+    &.has-border-bottom
+        &:after
+            content: ''
+            position: absolute
+            left: 0
+            right: 0
+            bottom: 0
+            border-bottom: 1px solid $color_gray_border
+
+        &.border-dashed
+            &:after
+                border-bottom-style: dashed
+
+        &.border-indent-left
+            &:after
+                left: 15 *$px
+
+        &.border-indent-right
+            &:after
+                right: 15 *$px
+
+
+
+
+.form-box-hd,
+.form-box-bd
+    padding: 12 *$px 0
+    margin: 0 15 *$px
+
+
+    &.has-padding-top
+        padding-top: 12 *$px
+    &.no-padding-top
+        padding-top: 0
+    &.large-padding
+        padding-top: 18 *$px
+        padding-bottom: 18 *$px
+    &.large-margin-top
+        margin-top: 12 *$px
+    &.large-margin-bottom
+        margin-bottom: 12 *$px
+    &.no-margin-sides
+        margin-left: 0
+        margin-right: 0
+    &.has-padding-sides
+        padding-left: 15 *$px
+        padding-right: 15 *$px
+
+.form-box-hd
+    font-size: 14 *$px
+.form-box-bd
+    padding-top: 0
+.form-box-icon
+    position: absolute
+    right: 0
+    top: 50%
+    margin: auto
+    transform: translate3d(0, -50%, 0)
+    &.active
+        color: $color_gold

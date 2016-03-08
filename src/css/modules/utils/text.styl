@@ -1,0 +1,110 @@
+/* 文本相关的工具类，比如font-size, color等  */
+.u-ellipsis
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+
+.u-white-space-nowrap
+    white-space: nowrap
+
+.u-word-break-all
+    word-wrap: break-word
+    word-break: break-all
+
+// 字体大小工具类
+.u-f10
+    font-size: 10*$px
+
+.u-f12
+    font-size: 12*$px
+
+.u-f14
+    font-size: 14*$px
+
+.u-f16
+    font-size: 16*$px
+
+.u-f18
+    font-size: 18*$px
+
+.u-f20
+    font-size: 20*$px
+
+.u-f24
+    font-size: 24*$px
+
+.u-f36
+    font-size: 36*$px
+
+
+//
+.u-fb
+    font-weight: 700
+
+
+// 文字对齐方式工具类
+.u-text-center
+    text-align: center
+
+.u-text-left
+    text-align: left
+
+.u-text-right
+    text-align: right
+
+.u-vm
+    vertical-align: middle
+
+//字体颜色
+.u-color-gold
+    color: $color_gold
+
+.u-color-black
+    color: $color_black_title
+
+.u-color-gray-summary
+    color: $color_gray_summary
+
+.u-color-gray-label
+    color: $color_gray_label
+
+.u-color-border
+    color: $color_gray_border
+
+.u-color-red
+    color: $color_red
+
+.u-color-yellow
+    color: $color_yellow
+
+.u-color-blackred
+    color: $color_blackred
+
+.u-color-green
+    color: $color_green
+
+.u-color-icon
+    color: $color_icon
+
+.u-color-white
+    color: #fff
+
+
+.u-bg-yellow
+    background: $color_yellow
+
+//删除线
+.u-del
+    text-decoration:line-through
+
+.u-black-link
+    color: $color_black_title
+    &:hover
+        color: $color_gold_hover
+    &:active
+        color: $color_gold
+
+// 透明度
+for op in (1..10)
+    .u-opacity-{op}
+        opacity: op*0.1

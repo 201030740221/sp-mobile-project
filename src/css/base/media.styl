@@ -1,0 +1,30 @@
+responsive_adpation(index)
+  html
+    font-size $adaption_font_min + $adaption_font_step * index
+
+responsive_grid(index)
+    .grid-avg > *
+        width: unit(100/index, '%')
+
+// 自适应大小
+$index = -1
+for $i in range($adaption, $adaption_step)
+    $media = media('screen', '(min-width: ' + $i + ')')
+    $index += 1
+    @media $media
+        responsive_adpation($index)
+//fixed 横屏
+$index = 2
+for $i in range($adaption_horizontal, $adaption_step_horizontal)
+    $media = media('screen', '(max-height: ' + (0 - $i) + ')')
+    $index -= 1
+    @media $media
+        responsive_adpation($index)
+
+// 等分网格响应式布局
+$index = 0
+for $i in range($responsive, $responsive_step)
+    $media = media('screen', '(min-width: ' + $i + ')')
+    $index += 1
+    @media $media
+        responsive_grid($index)

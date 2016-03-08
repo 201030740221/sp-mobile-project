@@ -1,0 +1,132 @@
+/***
+* 购物车item
+* Author: Remiel.
+***/
+.cart-item
+    padding 20*$px 16*$px
+    position: relative
+    min-height: 122 *$px
+    border-bottom: 1px solid $color_gray_border
+    
+    &-sold-out
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        background: rgba(0, 0, 0, .3)
+        color: #fff
+        font-size: 12 *$px
+        text-align: center
+        line-height: 2em
+    > .img
+        width: 82 *$px
+        height: 82 *$px
+        position: absolute
+        left: 52 *$px
+        top: 20 *$px
+
+    img
+        max-width: 100%
+        max-height: 100%
+        display: block
+
+    &-contnet
+        //position: absolute
+        //top: 20 *$px
+        //left: 156 *$px
+        //right: 16 *$px
+        position: relative
+        margin:0 0  0 141 *$px
+
+        .u-ellipsis
+            display: block
+
+        > h4
+            font-weight: normal
+            font-size: 14 *$px
+            color: $color_black_title
+            line-height: 20 *$px
+            padding-right: 5em
+            margin-bottom: 4 *$px
+
+        > h5
+            font-weight: normal
+            font-size: 12 *$px
+            color: $color_gray_summary
+            line-height: 20 *$px
+
+    .counter
+        margin-top: 4 *$px
+
+
+    &-price
+        position: absolute
+        right: 0
+        top: 0
+        color: $color_gold
+
+.cart-item,
+.cart-collocation
+    background: #fff
+    .checkbox
+        position: absolute
+        left: 16 *$px
+        top: 50%
+        transform: translateY(-50%)
+
+.cart-collocation
+    margin: 6 *$px 0
+    padding: 12 *$px 0
+    &-title
+        margin-left: 50 *$px
+        line-height: 2em
+    &-content
+        position: relative
+        margin: 0 16 *$px
+        padding-bottom: 20 *$px
+        border-bottom: 1px dashed $color_gray_border
+    &-price
+        position: absolute
+        color: $color_gold
+        font-size: 14 *$px
+        line-height: 36 *$px
+        left: 34 *$px
+
+    .counter
+        margin: 4 *$px 0 0 141 *$px
+    .cart-item
+        border: 0 none
+        display: none
+        &:first-child
+            display: block
+
+
+    .active .cart-item
+        display: block
+
+
+    footer
+        height: 22 *$px
+        position: relative
+
+        .icon-arrowdownlarge
+            font-size: 24 *$px
+            position: absolute
+            right: 0
+            top: 0
+            left: 0
+            bottom: 0
+            width: 1em
+            height: 1em
+            margin: auto
+            padding: 0
+            transform: rotate3d(0, 0, 0, 0)
+            transition: transform 800ms ease-in-out
+
+        &.active .icon-arrowdownlarge
+            transform: rotate3d(1, 0, 0, 180deg)
+
+
+
+
+

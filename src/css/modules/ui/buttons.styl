@@ -1,0 +1,250 @@
+
+button {
+    padding: 0;
+}
+.btn, button, input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+}
+
+/*!
+Pure v0.6.1-pre
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
+.btn {
+    /* Structure */
+    display: inline-block;
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #d3af94;
+    border:1px solid #d3af94;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.btn::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+.btn {
+    font-family: inherit;
+    font-size: 14*$px;
+    padding: 0.8em 1em;
+    color: #fff; /* rgba not supported (IE 8) */
+    text-decoration: none;
+}
+
+.btn.btn-default.Tappable-active {
+    border:1px solid $color_gold_hover;
+    background: $color_gold_hover;
+    color: #fff;
+}
+
+
+
+.btn.btn-inverse.btn-outlined {
+    background: rgba(0, 0, 0, 0);
+    border:1px solid #fff;
+    color:#fff;
+}
+
+.btn.btn-primary {
+    background: #fff;
+    border:1px solid $color_gray_border;
+    color: $color_black_title;
+}
+
+.btn.btn-red {
+    background: #fff;
+    border:1px solid $color_red;
+    color: $color_red;
+}
+
+.btn.btn-white {
+    //background: #fff;
+    &,&.btn-outlined{
+        border:1px solid #fff;
+        color: #fff;
+    }
+}
+
+.btn.btn-yellow  {
+    background: $color_red;
+    border:1px solid $color_red;
+    color: $color_yellow;
+}
+
+.btn.btn-red-yellow  {
+    background: $color_red;
+    border:1px solid $color_red;
+    color: $color_yellow;
+}
+
+.btn.btn-black-yellow {
+    background: $color_black_title;
+    border:1px solid $color_black_title;
+    color: $color_yellow;
+}
+
+.btn.btn-primary.Tappable-active {
+    border:1px solid $color_gray_border;
+    background: $color_gray_border;
+}
+
+.btn.btn-success {
+    background: $color_green;
+    border:1px solid $color_green;
+    color: #fff;
+}
+
+.btn.btn-success.Tappable-active {
+    border:1px solid $color_gold_hover;
+    background: $color_gold_hover;
+}
+
+.btn.btn-danger {
+    background: $color_blackred;
+    border:1px solid $color_blackred;
+    color: #fff;
+}
+
+.btn.btn-danger.Tappable-active {
+    border:1px solid $color_gold_hover;
+    background: $color_gold_hover;
+}
+
+.btn.btn-link {
+    background: rgba(0,0,0,0);
+    border:none;
+    color: $color_gray_label;
+}
+
+.btn.btn-link.Tappable-active {
+    border: none;
+    background: rgba(0,0,0,0);
+    color: $color_gold_hover;
+}
+
+.btn.btn-icon {
+    background: rgba(0,0,0,0);
+    border:none;
+    color: $color_gray_label;
+    font-size: 25*$px;
+    padding: 0 0.3em;
+}
+
+.btn.btn-icon.Tappable-active {
+    border: none;
+    background: rgba(0,0,0,0);
+    color: $color_gold_hover;
+}
+
+.btn.hover,
+.btn:hover,
+.btn:focus {
+
+}
+.btn:focus {
+    outline: 0;
+}
+.btn.btn-default.active,
+.btn.btn-default:active {
+    border:1px solid $color_gold_hover;
+    background: $color_gold_hover;
+}
+
+.btn[disabled],
+.btn.disabled,
+.btn.disabled.Tappable-active,
+.btn.disabled:hover,
+.btn.disabled:focus,
+.btn.disabled:active {
+    cursor: not-allowed;
+    box-shadow: none;
+    //color: #fff;
+    //border:1px solid $color_gray_border;
+    opacity: 0.7
+    //background: $color_gray_border;
+}
+
+.btn.hide {
+    display: none;
+}
+
+.btn.btn-checkout
+    font-size: 14 *$px
+    padding: 11 *$px 20 *$px
+    min-width: 72 *$px
+
+
+.btn.u-f12
+    font-size: 12 *$px
+
+.btn.btn-large
+    min-width: 150 *$px
+
+.btn.btn-small
+    padding: .4em 1em
+.btn.btn-smaller
+    padding: .2em .5em
+.btn.btn-smallest
+    padding: 0 .25em
+
+.btn.u-none
+    display: none
+
+.btn.disabled.btn-danger
+    cursor: not-allowed;
+    box-shadow: none;
+    color: #fff;
+    border:1px solid $color_blackred;
+    opacity: 0.7
+    background: $color_blackred;
+
+.btn.btn-block {
+    width:100%;
+}
+
+.btn.btn-outlined {
+    background: rgba(0, 0, 0, 0);
+    border:1px solid $color_gray_border;
+    color: $color_black_title;
+}
+
+.btn.btn-outlined.btn-danger {
+    border: 1px solid $color_red;
+    color: $color_red;
+}
+
+.btn.btn-outlined.btn-primary {
+    border: 1px solid $color_gold_hover;
+    color: $color_gold_hover;
+}
+
+.btn.btn-outlined.btn-primary.Tappable-active {
+    border:1px solid $color_gold_hover;
+    background: $color_gold_hover;
+}
+
+.btn.btn-rounded {
+    border-radius: 50*$px;
+}
+
+.btn.btn-outlined.Tappable-active {
+    color: #fff;
+}
+
+.btn.btn-outlined.btn-danger.Tappable-active {
+    color: #fff;
+    background: $color_red;
+}

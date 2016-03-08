@@ -1,0 +1,35 @@
+.good-item-col
+    border-right: 1px solid $color_gray_border
+    border-bottom: 1px solid $color_gray_border
+// 不设置border-right none，而是设置和背景同样颜色
+// 目的是使左右两栏保持宽度一致，这样内部的img在设置百分比宽度时候，高度可以保持一致
+// 否则出现bug: https://www.teambition.com/project/5514d5a9e323831a775b0958/tasks/scrum/557f84e33786fd6b0c86b136/task/558ba2dfa1aeef1e771e61fb
+.good-item-col:nth-child(2n)
+    border-right-color: $bg_page 
+
+.good-item
+    padding-top 15*$px
+    padding-bottom 10*$px
+    &-title
+        margin-top 10*$px
+        h3
+            a
+                color $color_black_title
+            fontsize: 14*$px
+        .price
+            margin-top 5*$px
+            fontsize: 12*$px
+            color: $color_gold
+
+    &-actions
+        .btn
+            fontsize: 12*$px
+
+.good-item-actions
+    margin-top 10*$px
+.action-border
+    color #f2f2f2
+
+.goods-list, .member-favorite
+    .good-item-image img
+        width 60%

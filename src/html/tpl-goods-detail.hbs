@@ -1,0 +1,21 @@
+<div class="more-good-detail-section">
+    <div class="more-detail">
+        <h3>商品信息</h3>
+        {{#each info.value}}
+            <p>
+                <span>{{title}}: </span><span>{{content}}</span>
+            </p>
+        {{/each}}
+    </div>
+    <div class="more-detail">
+        <h3>商品细节</h3>
+        <p>
+            <span>单位: </span><span>mm</span>
+        </p>
+        <ul class="more-detail-list">
+            {{#each detail_picture.value}}
+            <li><img src="{{url}}?imageView2/2/w/640" data-media-id="{{id}}"/></li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+/**
+   命名注意：不要和原生css属性名同名
+*/
+// 单位转换，px转为rem
+remify(value) { /* separate mixin, so it can be used elsewhere */
+    u = unit(value);
+    
+    if (value == 1px) {
+        return 1px
+    }
+
+    if (u is 'px' || !u) {
+        return unit(value / $font-size, 'rem');
+    } else {
+        return unit(value, u);
+    }
+}
+
+// 长度大小，批量转换px为rem
+// len(1px 2px) => 0.0625rem 0.125rem
+len(values)
+    for value, i in values
+       values[i] = remify(value) 
+    return values
+
+media()
+  join(' and ', arguments)
+// sort(values)
+//   for $i in 0..length(values) - 1
+//       u = unit(values[$i])
+//       values[$i] = unit(values[$i] / $font-size, 'rem')
+//   return values

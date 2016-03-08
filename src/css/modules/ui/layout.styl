@@ -1,0 +1,53 @@
+/* 布局类 */
+.clearfix, .clear
+    clearfix()
+    
+#header
+    position relative
+    padding len(5 10)
+    height len(56)
+    line-height len(46)
+    box-shadow 0 len(2) len(2) alpha(#000, 0.1)
+    > h2 
+        text-align: center
+        
+#footer
+    padding len(5 10)
+    height len(40)
+    line-height len(40)
+    background alpha(#000, 0.1)
+    text-align center
+
+.title
+    padding len(10)
+    margin len(15 0)
+    border-bottom len(1) solid $color_gray_border
+    
+/**
+ * 生成外边距内边距类，类名中的数字是边距值
+ 例如：  .mt10 .mt15 .. .mt30 外上边距
+        .pt10 .pt15 .. .pt30 内上边距
+        .panel10 .panel15 .. .panel30 上下外边距
+*/ 
+for i in (2..6)
+    s = i * 5
+    v = len(i * 5)
+    .mt{s}
+        margin-top v
+    .mb{s}
+        margin-bottom v
+    .ml{s}
+        margin-left v
+    .mr{s}
+        margin-right v
+    .pt{s}
+        padding-top v
+    .pb{s}
+        padding-bottom v
+    .pl{s}
+        padding-left v
+    .pr{s}
+        padding-right v
+    .panel{s}
+        margin-top v
+        margin-bottom v

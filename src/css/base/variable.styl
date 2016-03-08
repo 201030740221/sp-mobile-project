@@ -1,0 +1,59 @@
+/*
+变量命名规则：
+1、以 $ 符号开头
+2、和css属性名一样的，使用属性名做变量名，例如 文字大小 $font-size
+3、和css属性名不一样的，使用下划线连接规则，例如 颜色 $color_green, $color_red等，如果文字大小有多个，
+   命名为： $font-size_small, $font-size_large等
+4、其他变量驼峰
+*/
+$printStyleSwitch = false; //是否开启打印样式
+$columns = 12; //总栅格数，默认为12栏
+$gridPercent = true; //流体布局
+// font相关
+//-----------------------------------------------------
+$font-size =          16px;
+$line-height =        1.5;
+$font-family =        'helvetica neue', arial, "PingHei", 'Hiragino Sans GB', stheiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+//$fontCn=                "SimSun"; //宋体
+//$fontYaHei=             "Microsoft Yahei"; //微软雅黑
+
+$px = unit( 1 / $font-size, 'rem')
+
+// 颜色
+//==============
+$color_gold = #d3af94;           // 页面主体颜色
+$color_gold_hover = #e9c998;     // 高亮颜色
+$color_black_title = #3a3a3a;    // 标题颜色
+$color_gray_summary = #7d7d7d;   // 内容简介主要颜色
+$color_gray_label = #a0a0a0;      // 标签文字颜色
+$color_gray_border = #eaeaea;    // 边框线条颜色
+$color_blackred = #994b53;       // 点缀、出错颜色
+$color_green = #5ab26d;          // 点缀、正确颜色
+
+$color_red = #c03230                   //活动红色
+$color_yellow = #ffff00                   //活动黄色
+
+$color_line_dark = #c8c3c3 // 较深的线条色
+$color_line_light = #dcdcdc // 较浅的线条色
+
+$color_error = $color_blackred;  //点缀、出错颜色
+$color_success = $color_green; //点缀、正确颜色
+$color_icon = #898989; //iconfont 正常颜色
+
+// 背景
+$bg_page = #fff;
+
+// media query
+$adaption = 240px 640px // 自适应分辨率起止值
+$adaption_step = 80px //  自适应分辨率跨度值
+$adaption_horizontal = -479px -319px // 自适应分辨率起止值 //横屏
+$adaption_step_horizontal = 80px //  自适应分辨率跨度值 //横屏
+
+$responsive = 320px 640px // 响应式分辨率起止值
+$responsive_step = 160px // 响应式分辨率跨度值
+
+$adaption_font_min = 14px
+$adaption_font_max = 24px
+$adaption_font_step = 2px
+
+$navbar_height = 54 *$px

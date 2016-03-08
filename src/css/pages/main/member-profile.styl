@@ -1,0 +1,47 @@
+.member-banner {
+    background: url('../images/bg-profile.jpg') no-repeat 0 0;
+    background-size:cover;
+    height:200*$px;
+
+    .avatar {
+        padding-top:60*$px;
+        text-align: center;
+    }
+
+    .username-box {
+        margin-top:15*$px;
+        text-align: center;
+        font-size:14*$px;
+    }
+
+}
+
+.member-profile-take-delivery {
+    color: $color_gray_label;
+    font-size:12*$px;
+    display:block;
+    padding-left:15*$px;
+    border-bottom:1px solid $color_gray_border;
+    .address {
+        -webkit-flex-shrink: 1;
+        -ms-flex: 0 1 auto;
+        flex-shrink: 1;
+        white-space: nowrap;
+        position: relative;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+}
+.member-profile-take-delivery .member-profile-take-delivery-inner {
+    border-top:1px solid $color_gray_border;
+    padding-top: 15*$px;
+    padding-bottom: 10*$px;
+    padding-right: 35*$px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%2060%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'm60%2061.5-38.25%2038.25-9.75-9.75%2029.25-28.5-29.25-28.5%209.75-9.75z'%20fill%3D'%23c7c7cc'%2F%3E%3C%2Fsvg%3E");
+    background-size: 10*$px 20*$px;
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    //background-position: -webkit-calc(100% - 15px) center;
+    //background-position: calc(100% - 15px) center;
+}

@@ -1,0 +1,32 @@
+.search-btn
+    display inline-block
+    margin-right len(-10)
+    padding 0 len(20)
+    fontsize(15)
+    color $color_gray_summary
+    
+.search-input
+    relative()
+    display inline-block
+    height len(26)
+    line-height len(26)
+    
+    input 
+        padding len(5 30)
+        border 0 none
+        border-bottom 1px solid $color_gray_summary
+        fontsize(14)
+        
+        &:focus
+            border-color $color_gold_hover
+    > i
+        absolute()
+        left len(5)
+        top 0
+        color $color_gray_summary
+    > .icon-search
+        top 2px
+    > .content-clear
+        left auto
+        right 0
+        fontsize(22)

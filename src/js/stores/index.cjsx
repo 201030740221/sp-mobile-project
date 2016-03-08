@@ -1,0 +1,42 @@
+assign = require 'object-assign'
+
+stores = assign(
+    {
+        address: require './address'
+        newAddress: require './new-address'
+        cart: require './cart'
+        checkout: require './checkout'
+        invoice: require './invoice'
+        memberFavorite: require './member-favorite'
+        memberLogin: require './member-login'
+        memberMobile: require './member-mobile'
+        memberPassword: require './member-password'
+        member: require './member'
+        newAddress: require './new-address'
+        orderDetail: require './order-detail'
+        orderList: require './order-list'
+        region: require './region'
+        memberMobileTemp: require './member-mobile-temp'
+        share: require './share'
+        point: require 'stores/point'
+        referral: require 'stores/referral'
+        checkout: require 'stores/checkout'
+        coupon: require 'stores/coupon'
+        website: require 'stores/website'
+        goodDetail: require 'stores/good-detail'
+        favorite: require 'stores/favorite'
+        activityJuly: require 'stores/activity-july'
+        activityNovember: require 'stores/activity-november'
+        activityNovember4: require 'stores/activity-november-4'
+        comment: require 'stores/comment'
+        region: require 'stores/region'
+        flashSale: require 'stores/flash-sale'
+        goodsList: require 'stores/goods-list'
+        goodsCategories: require 'stores/goods-categories'
+        lottery: require 'stores/lottery'
+        serviceCard: require 'stores/service-card'
+        payment: require 'stores/payment'
+    }
+);
+
+module.exports = stores;

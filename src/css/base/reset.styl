@@ -1,0 +1,163 @@
+// css重置，兼容ie8+
+/*
+ * 参考：
+ * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ * http://www.chedanji.com/css3-box-sizing/
+ */
+/* html的优先级是大于*的，所以前后顺序无所谓 */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+input, select {
+    vertical-align: middle;
+    font-size: 100%;
+    outline: none;
+}
+input[type="text"], input[type="text"]:focus {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+h2 {
+    fontsize(20px)
+}
+h3 {
+    fontsize(18px);
+}
+h4, h5, h6 {
+    fontsize(14px);
+    color: $color_black_title;
+}
+address, cite, em, dfn {
+    font-style: normal;
+}
+ul {
+    list-style: none;
+}
+fieldset, img, iframe {
+    border: none;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+pre {
+    white-space: pre-wrap !important
+}
+/* html5 tags */
+article, aside, dialog, footer, header, section, footer, nav, figure {
+    display: block
+}
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html {
+    overflow-y: scroll;
+    font-size: $font-size;
+}
+body {
+    font-family: $font-family;
+    line-height: $line-height;
+    color: $color_gold;
+    word-wrap: break-word;
+}
+/* common tags */
+ul {
+    list-style: none
+}
+th, td {
+    padding: len(6px 5px);
+    text-align: left
+}
+img {
+    -ms-interpolation-mode: bicubic; //windows平台缩放图片时，可能出现图像失真现象
+    vertical-align: middle
+}
+input[type=checkbox], input[type=radio] {
+    padding: 0
+}
+/* for ie9 */
+a {
+    text-decoration: none;
+    color: $color_gold;
+    cursor: pointer;
+}
+a:hover {
+    color: #3e9ee0;
+}
+
+/*
+input[type="text"], input[type="url"], input[type="password"], input[type="email"]
+, input[type="number"], input[type="float"], input[type="search"] {
+    padding: 0 len(4px);
+    height: len(26px); line-height: len(26px);
+    border: len(1px) solid #d2d2d2;
+    box-shadow 0 len(1px 1px) rgba(0, 0, 0, 0.1) inset;
+    box-sizing border-box;
+}
+input[type="text"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="email"]:focus
+, input[type="number"]:focus, input[type="float"]:focus, input[type="search"]:focus {
+    border: len(1px) solid #ffa800;
+    box-shadow 0 0 len(2px) #ffa800;
+}
+input[type="text"], input[type="search"], input[type="number"], input[type="float"], input[type="url"], input[type="email"], textarea {
+    color: $color_text;
+}
+input:-moz-placeholder, textarea:-moz-placeholder
+, input:-ms-input-placeholder, textarea:-ms-input-placeholder
+, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: $color_gray_summary;
+}*/
+input[type="search"] {
+    -webkit-appearance: textfield;
+}
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+input[type="submit"] {
+    border: none;
+}
+textarea {
+    resize: none;
+    border: none;
+    outline: none;
+}
+select {
+    border: len(1px) solid $color_gray_border;
+    text-align: center;
+    // color: $color_text;
+}
+
+/*
+.btn, button {
+    padding: len(4px 25px 6px);
+    text-align: center;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+} */
+// .btn:hover, button:hover {
+//     color: #fff;
+// }
+/* 头像尺寸，一种控制方式，比较喜欢用background-images方式，这样可以随意控制图片居中
+.avatar-tiny, .avatar-small, .avatar-medium, .avatar-large {display:inline-block;overflow:hidden}
+.avatar-tiny  {width:30px;height:30px}
+.avatar-small {width:50px;height:50px}
+.avatar-medium{width:100px;height:100px}
+.avatar-large {width:160px;height:160px}
+    .avatar-tiny img {width:30px}
+    .avatar-small img  {height:50px}
+    .avatar-medium img {width:100px}
+    .avatar-large img  {width:160px}
+*/
+
+/* 设置默认字体*/
+body, input, select, textarea{
+    font-size: 12 *$px
+}

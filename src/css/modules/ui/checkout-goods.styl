@@ -1,0 +1,58 @@
+/***
+* checkout-goods  商品清单, 可用于checkout和order
+* Author: Remiel.
+***/
+.checkout-goods
+    .active &-item
+        display: block
+
+    &-item
+        display: none
+        padding: 15 *$px 0
+        min-height: 118 *$px
+        position: relative
+        &:first-child
+            display: block
+
+
+        > .img
+            width: 88 *$px
+            height: 88 *$px
+            position: absolute
+            left: 0
+            top: 15 *$px
+
+        img
+            max-width: 100%
+            max-height: 100%
+            display: block
+
+
+    &-content
+        position: absolute
+        left: 105 *$px
+        top: 15 *$px
+        right: 0
+        
+    footer
+        height: 22 *$px
+        position: relative
+        
+        .icon-arrowdownlarge
+            font-size: 24 *$px
+            position: absolute
+            right: 0
+            top: 0
+            left: 0
+            bottom: 0
+            width: 1em
+            height: 1em
+            margin: auto
+            padding: 0
+            transform: rotate3d(0, 0, 0, 0)
+            transition: transform 800ms ease-in-out
+
+        &.active .icon-arrowdownlarge
+            transform: rotate3d(1, 0, 0, 180deg)
+
+

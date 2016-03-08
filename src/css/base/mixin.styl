@@ -1,0 +1,40 @@
+// 设置文字大小
+// 貌似最好不要和css属性同名，比如下面这个fontsize, 而不是 font-size
+fontsize(value) {
+    // font-size: value; /* add PX (or original value) as backup */
+
+    if (value is inherit) {
+        /* do nothing, "inherit" has no unit */
+    } else {
+        font-size: remify(value);
+    }
+}
+
+shadow() {
+    box-shadow: arguments
+}
+sizing() {
+    box-sizing: arguments
+}
+
+clearfix() {
+    &:after {
+        content: "\20";
+        display: block;
+        clear: both;
+    }
+}
+
+// layout mixins
+block() {
+    display block
+}
+inline-block() {
+    display inline-block
+}
+relative() {
+    position relative
+}
+absolute() {
+    position absolute
+}

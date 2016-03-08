@@ -1,0 +1,152 @@
+/***
+* Slider
+* Author: Remiel.
+***/
+.slider
+    overflow: hidden
+    position: relative
+    &-inner
+        overflow: hidden
+    &-item
+        overflow: hidden
+        width: 100%
+        float: left
+    img
+        width: 100%
+        display: block
+
+
+    &.full-screen
+        height: 100%
+
+        .slider
+            &-inner
+                height: 100%
+            &-item
+                position: relative
+                top: 50%
+                transform: translateY(-50%)
+
+        .slider-nav
+            &-item
+                background: #898989
+                border: 1px solid #898989
+                &:hover
+                    background: #f2f4f9
+                    border-color: #f2f4f9
+
+            &-item.active
+                background: #f2f4f9
+                border-color: #f2f4f9
+                &:hover
+                    background: #f2f4f9
+
+    &.vertical
+        height: 100%
+
+        .slider
+            &-inner
+                overflow: hidden
+            &-item
+                overflow: hidden
+                width: auto
+                float: none
+        img
+            height: 100%
+            width: auto
+.slider-nav
+    position: absolute
+    left: 24 *$px
+    right: 24 *$px
+    bottom: 0
+
+.slider-nav.nav-at-center
+    text-align: center
+
+.slider-nav.nav-at-right
+    text-align: right
+
+.slider-nav
+    &-item
+        display: inline-block
+        width: 4 *$px
+        height: 4 *$px
+        border-radius: 4 *$px
+        margin: 3 *$px
+        background: #f2f4f9
+        border: 1px solid #f2f4f9
+        &:hover
+            background: #898989
+            border-color: #898989
+
+    &-item.active
+        background: #898989
+        border-color: #898989
+        &:hover
+            background: #898989
+.nav-gold
+    .slider-nav
+        &-item
+            width: 8 *$px
+            height: 8 *$px
+            border-radius: 8 *$px
+            margin: 6 *$px
+            background: #f2f4f9
+            border: 1px solid #fff
+            &:hover
+                background: $color_gold_hover
+                border-color: #c9a78e
+
+        &-item.active
+            background: #d6c3b6
+            border-color: #c9a78e
+            &:hover
+                background: $color_gold_hover
+.nav-gray
+    .slider-nav
+        &-item
+            width: 6 *$px
+            height: 6 *$px
+            border-radius: 6 *$px
+            margin: 6 *$px
+            background: transparent
+            border: 1px solid $color_gray_summary
+            &:hover
+                background: $color_gray_summary
+
+        &-item.active
+            background: $color_gray_summary
+
+.nav-square
+    .slider-nav
+        &-item
+            width: 6 *$px
+            height: 6 *$px
+            border-radius: 0
+            margin: 4 *$px
+            background: transparent
+            border: 1px solid #fff
+            &:hover
+                background: #9b604f
+                border-color: #9b604f
+
+        &-item.active
+            background: #9b604f
+            border-color: #9b604f
+
+.nav-square2
+    .slider-nav
+        &-item
+            width: 6 *$px
+            height: 6 *$px
+            border-radius: 0
+            margin: 2 *$px
+            background: transparent
+            border: 1px solid $color_gray_summary
+            &:hover
+                background: $color_gray_summary
+                border-color: $color_gray_summary
+
+        &-item.active
+            background: $color_gray_summary
+            border-color: $color_gray_summary

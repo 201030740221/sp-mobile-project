@@ -1,0 +1,90 @@
+/***
+* lite-cart
+* Author: Remiel.
+
+*   liteCart需要absolute定位，并且放置在和PageContent同级的位置
+*   这样可以避免webview遮盖购物车图标
+*   <PageContent>。。</PageContent>
+*   <LiteCart />
+***/
+.lite-cart
+    position: absolute;
+    z-index: 9999
+    right: 15*$px;
+    bottom: 28*$px;
+    width: 54*$px;
+    height: 57*$px;
+    background-image: url('../images/cart-section.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    span
+        display: block;
+        min-width: 18*$px;
+        height: 18*$px;
+        border-radius: 100%;
+        background: #994b53;
+        position: absolute;
+        right: 0*$px;
+        top: 0*$px;
+        line-height: 18*$px;
+        font-size: 12*$px;
+        color: #fff;
+        text-align: center;
+        transform: scale(1) translate3d(0, 0, 0)
+
+    .animate
+        animation: lite-cart-animate 200ms linear
+
+@keyframes lite-cart-animate
+    0%, 100%
+        transform: scale(1)
+    25%,75%
+        transform: scale(1) translate3d(10* $px, 10* $px, 10* $px)
+    50%
+        transform: scale(.2) translate3d(-10* $px, -10* $px, -10* $px)
+
+
+.nav-btn.cart
+    .lite-cart.u-none
+        display: none
+
+
+.add-to-cart
+    position: relative
+    &-inner
+        position: absolute
+        left: 50%
+        top: 0
+        transform: translate(-50%, 0)
+
+.add-to-cart-anmite
+    animation: add-to-cart-animate 500ms ease-in
+    animation-fill-mode: forwards
+    position: absolute
+    z-index: 9999
+    overflow: hidden
+    transition-property: border-color, border-radius, background-color, color, width, height
+    transition-duration:.5s
+    transition-timing-function:ease-in
+    transition-delay:.1s
+    width: 20 *$px
+    height: 20 *$px
+    border-radius: 20 *$px
+    background: $color_blackred
+    color: transparent
+
+
+@keyframes add-to-cart-animate
+    0%
+        opacity: .01
+        width: 10 *$px
+        height: 10 *$px
+
+    50%
+        width: 25 *$px
+        height: 25 *$px
+
+    100%
+        opacity: 1
+        width: 20 *$px
+        height: 20 *$px

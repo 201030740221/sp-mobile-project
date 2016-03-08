@@ -1,0 +1,44 @@
+/***
+* Loading
+* Author: Remiel.
+***/
+.loading
+    position: fixed
+    z-index: 9999
+    top: 50%
+    left: 50%
+    margin: auto
+    text-align: center
+    transform: translate(-50%,-50%)
+    width: 64 *$px
+    height: 64 *$px
+    line-height: 64 *$px
+    font-size: 30 *$px
+    color: $color_gold
+    border-radius: 5 *$px
+    background: rgba(0,0,0,.4)
+    &:after
+        content: ''
+        animation: loading 800ms linear 0s infinite
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        margin: auto
+        width: 50 *$px
+        height: 50 *$px
+        border-radius: 50 *$px
+        border: 1px solid #fff
+        border-left-color: $color_gold
+
+    &.inside
+        position: absolute
+
+.loading-placeholder
+    height: 64 *$px
+@keyframes loading
+    from
+        transform: rotate(135deg)
+    to
+        transform: rotate(495deg)

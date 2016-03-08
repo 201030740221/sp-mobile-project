@@ -1,0 +1,27 @@
+/***
+* payment
+* Author: Remiel.
+***/
+.payment-method
+    min-height: 54 *$px
+    padding-left: 54 *$px
+    line-height: 30 *$px
+    
+
+.payment-method-icon
+    width: 40 *$px
+    height: 40 *$px
+    border: 1px solid $color_gray_border
+    border-radius: 4 *$px
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translate3d(0, -50%, 0)
+    background-repeat: no-repeat
+    background-size: 100%
+    &.alipay
+        background-image: url("../images/payment/alipay@2x.png")
+    &.unionpay
+        background-image: url("../images/payment/unionpay@2x.png")
+    &.wxpay
+        background-image: url("../images/payment/wxpay@2x.png")

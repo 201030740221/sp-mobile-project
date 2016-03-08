@@ -1,0 +1,16 @@
+.push-refresh-tip
+    relative()
+    background #fff
+    height 0
+    overflow hidden
+    
+    &:after
+        content '正在加载...'
+        position absolute
+        top len(40)
+        left 0
+        width 100%
+        height len(20)
+        text-align center
+    &.loaded:after
+        content '已全部加载'

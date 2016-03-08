@@ -1,0 +1,173 @@
+
+/* probably switching to autoprefixer in the future */
+
+.lite-modal 
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 9999
+    display: -moz-box
+    display: -webkit-box
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flexbox
+    display: -ms-flex
+    display: flex
+    -webkit-box-orient: vertical
+    -moz-box-orient: vertical
+    -webkit-box-direction: normal
+    -moz-box-direction: normal
+    -webkit-flex-direction: column
+    -moz-flex-direction: column
+    -ms-flex-direction: column
+    flex-direction: column
+    -webkit-box-pack: center
+    -moz-box-pack: center
+    -ms-flex-pack: center
+    -webkit-justify-content: center
+    -moz-justify-content: center
+    -ms-justify-content: center
+    justify-content: center
+    -webkit-box-align: stretch
+    -moz-box-align: stretch
+    -ms-flex-align: stretch
+    -webkit-align-items: stretch
+    -moz-align-items: stretch
+    -ms-align-items: stretch
+    align-items: stretch
+    height: 100%
+    line-height: 1.6em
+    overflow: auto
+    background-color: rgba(0, 0, 0, .5)
+    color: $color_black_title
+    -webkit-transform: translateZ(0)
+    -webkit-backface-visibility: hidden
+
+    &.full-screen
+        .wrapper
+            padding: 0
+            height: 100%
+        .box
+            background: transparent
+            height: 100%
+            position: relative
+
+.lite-modal .wrapper
+    padding: 60*$px 0
+    overflow: auto
+
+.lite-modal .box
+    background-color: #fff
+    //margin: 0 15*$px
+    box-shadow: 0 3px 16 *$px rgba(0, 0, 0, .3)
+
+.lite-modal>.wrapper>.box>.title 
+    padding: 10*$px
+    border-bottom: 1px solid $color_gray_border
+    text-align: center
+
+.lite-modal>.wrapper>.box>.title .name 
+    font-size: 18*$px
+    color: $color_gold
+
+.lite-modal>.wrapper>.box .icon-delete
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 1
+    cursor: pointer
+    font-size: 32 *$px
+    height: 1em
+    line-height: 1em
+    color: $color_red
+    transition: color 218ms
+
+.lite-modal>.wrapper>.box .icon-delete:hover
+    color: $color_blackred
+
+.lite-modal.fade-enter .box
+    transform: translate(0, -40px)
+
+.lite-modal.fade-enter-active .box
+    transform: scale(1)
+    transition: transform 200ms ease-in-out
+
+.lite-modal.fade-leave .box
+    transition: all 150ms ease-in-out
+
+.lite-modal.fade-leave-active .box
+    opacity: .01
+    transform: translate(0, -40px)
+
+
+
+/**/
+.lite-modal-hd
+    line-height: 48 *$px
+    font-size: 14 *$px
+    background: $color_gray_border
+    position: relative
+    text-align: center
+
+
+
+/* message */
+.lite-modal
+    &.message
+        display: block
+        background: transparent
+        
+        .wrapper
+            padding: 0
+            text-align: center
+
+        .box
+            border: 2 *$px solid #fff
+            background: $color_gray_border
+            color: $color_black_title
+            margin: auto
+            padding: 15 *$px 18 *$px
+            line-height: 24 *$px
+            box-shadow: 0 4 *$px 12 *$px rgba(4,0,0,.3)
+            font-size: 14 *$px
+
+
+/* modal-at-bottom */
+.modal-at-bottom
+    &.lite-modal
+        display: block
+        .wrapper
+            padding: 0
+            position: absolute
+            bottom: 0
+            left: 0
+            right: 0
+
+    &.lite-modal.fade-enter .box
+        transform: translate(0, 100%)
+
+    &.lite-modal.fade-enter-active .box
+        transform: scale(1)
+
+    &.lite-modal.fade-leave-active .box
+        opacity: .01
+        transform: translate(0, 100%)
+
+/* modal-at-top */
+.modal-at-top
+    &.lite-modal
+        display: block
+        .wrapper
+            padding: 0
+
+    &.lite-modal.fade-enter .box
+        transform: translate(0, -100%)
+
+    &.lite-modal.fade-enter-active .box
+        transform: scale(1)
+
+    &.lite-modal.fade-leave-active .box
+        opacity: .01
+        transform: translate(0, -100%)

@@ -1,0 +1,41 @@
+.tab
+    line-height: 48 *$px
+    text-align: center
+    font-size: 14 *$px
+    color: $color_gray_summary
+    background: #fff
+    table&
+        table-layout: fixed
+        td
+            padding: 0
+    &-item
+        border-right: 1px solid $color_gray_border
+        border-bottom: 1px solid $color_gray_border
+        &:last-child
+            border-right: 0
+        &.active
+            border-bottom: 0
+            color: $color_gold
+
+
+.underline.tab
+    color: $color_black_title
+    .tab
+        &-item
+            border: 0 none
+            &-inner
+                display: inline-block
+                height: 100%
+                position: relative
+                &:before
+                    content: ''
+                    position: absolute
+                    left: 0
+                    right: 0
+                    bottom: 0
+                    height: 3px
+                    background: #fff
+            &.active
+                color: #9d6050
+            &.active  .tab-item-inner:before
+                background: #9d6050

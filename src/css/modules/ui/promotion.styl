@@ -1,0 +1,44 @@
+$promo_size = 12 *$px
+
+.promotion
+    margin: 0 0 10*$px
+    padding: 2px 3*$px
+    border: 2px dotted $color_line_dark
+    
+    > * 
+        display: inline-block
+        vertical-align: middle
+        
+    .promo-title 
+        margin-right: 3*$px
+    
+    .discount
+        position: relative
+        padding: 0 6*$px 0 0
+        margin: 0 5*$px 0 0
+        border-right: 1px solid $color_line_light
+        font-size: 10*$px
+        color: #fff
+        
+        &:before, &:after
+            display: block
+            width: $promo_size
+            height: $promo_size
+            line-height: $promo_size
+            text-align: center
+
+        &:before
+            content: "\6ee1" // 中文 满 的unicode
+            background: $color_black_title
+            
+        &:after 
+            margin: 2px 0 0 7*$px
+            content: "\6298" // 中文 折 的unicode
+            background: #9b604f
+            
+    .remission
+        
+        &:after
+            content: '\51CF'  // 中文 减 的unicode
+            background: #f3981c
+    

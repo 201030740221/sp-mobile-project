@@ -1,0 +1,268 @@
+
+.activity
+    $color_blue = #26bbff
+    $color_orange = #ed7a2a
+    $color_purple = #6b6bf8
+    $color_orchid = #e023cc
+    $color_pink = #f006a0
+    $color_cyan = #1ac0bc
+    $color_green = #8fce20
+
+
+    &-november-tab
+        background: $color_red
+        color: #fff
+        line-height: 44 *$px
+        text-align: center
+        font-size: 14 *$px
+        .active
+            border-bottom: 2 *$px solid $color_yellow
+            color: $color_yellow
+        &.u-pf
+            left: 0
+            right: 0
+            top: 54 *$px
+            z-index: 2
+
+    &-november-4
+        .page-content
+            padding-bottom: 0
+
+
+        .u-color-blue
+            color: $color_blue
+        .u-color-orange
+            color: $color_orange
+        .lottery-marquee
+            //background: linear-gradient(to top, $color_purple 0%, #489ee1 33%, #489ee1 80%, $color_purple 100%)
+            background: $color_pink
+        &-title
+            padding: 12 *$px 0 4 *$px
+            line-height: 24 *$px
+            text-align: center
+            background: $color_pink
+            font-size: 18 *$px
+            color: #fff
+            text-shadow: 0 0 3px #7e0bea, 2px 0 2px #7e0bea, 0 2px 2px #7e0bea, -2px 0 2px #7e0bea, 0 -2px 2px #7e0bea, 2px 2px 2px #7e0bea, 2px -2px 2px #7e0bea, -2px -2px 2px #7e0bea, -2px 2px 2px #7e0bea
+            &-text
+                display: inline-block
+                position: relative
+                &:before, &:after
+                    content: ''
+                    width: 21 *$px
+                    height: 27 *$px
+                    background: url("/images/activity/2015-11-4/icon-01.png") no-repeat
+                    background-size: 100%
+                    position: absolute
+                &:before
+                    left: -8 *$px
+                    bottom: 4 *$px
+                    transform: translate(-100%, 0)
+                &:after
+                    right: -6 *$px
+                    top: 4 *$px
+                    transform: translate(100%, 0) rotate(180deg)
+            &.left-top &-text
+                &:before
+                    bottom: auto
+                    top: 4 *$px
+                &:after
+                    top: auto
+                    bottom: 4 *$px
+            &.single-row
+                //font-size: 18 *$px
+                line-height: 32 *$px
+            &.single-row &-text
+                &:before
+                    bottom: 0
+                &:after
+                    top: 0
+            &.single-row &.left-top &-text
+                &:before
+                    bottom: auto
+                    top: 0
+                &:after
+                    top: auto
+                    bottom: 0
+
+        &-info
+            position: relative
+            z-index: 1
+            padding: 8 *$px 15 *$px
+            line-height: 22 *$px
+            &.bg-cyan
+                background: $color_cyan url("/images/activity/2015-11-4/bg-03.png") no-repeat top right
+                background-size: auto 100%
+                .activity-november-4-price
+                    color: $color_cyan
+            &.bg-orchid
+                background: $color_orchid url("/images/activity/2015-11-4/bg-03.png") no-repeat top right
+                background-size: auto 100%
+                .activity-november-4-price
+                    color: $color_orchid
+            &.bg-orange
+                background: $color_orange url("/images/activity/2015-11-4/bg-03.png") no-repeat top right
+                background-size: auto 100%
+                .activity-november-4-price
+                    color: $color_orange
+            &.bg-green
+                background: $color_green url("/images/activity/2015-11-4/bg-03.png") no-repeat top right
+                background-size: auto 100%
+                .activity-november-4-price
+                    color: $color_green
+            &.bg-purple
+                background: $color_purple url("/images/activity/2015-11-4/bg-03.png") no-repeat top right
+                background-size: auto 100%
+                .activity-november-4-price
+                    color: $color_purple
+            &.bg-blue
+                background: $color_blue url("/images/activity/2015-11-4/bg-02.png") no-repeat top right
+                background-size: 100% auto
+        &-price
+            position: absolute
+            top: -4 *$px
+            right: 19 *$px
+            background: url("/images/activity/2015-11-4/bg-04.png") no-repeat
+            background-size: 100%
+            width: 72 *$px
+            height: 80 *$px
+            padding-top:0 *$px
+
+        &-star
+            display: inline-block
+            width: 11 *$px
+            height: 10 *$px
+            margin-right: 4 *$px
+            background: url("/images/activity/2015-11-4/icon-star.png") no-repeat
+            background-size: 100%
+
+        &-btn
+            display: inline-block
+            line-height: 24 *$px
+            height: 24 *$px
+            border-radius: 24 *$px
+            min-width: 100 *$px
+            padding: 0 8 *$px
+            color: #fff
+            font-size: 12 *$px
+            &.btn-orange-yellow
+                background: $color_orange
+                color: $color_yellow
+            &.btn-cyan
+                background: $color_cyan
+            &.btn-orchid
+                background: $color_orchid
+            &.btn-orange
+                background: $color_orange
+            &.btn-green
+                background: $color_green
+            &.btn-purple
+                background: $color_purple
+
+        &-block-1
+            &-hd
+                position: relative
+                font-size: 14 *$px
+                line-height: 32 *$px
+                background: $color_purple
+                color: #fff
+                text-align: center
+                margin-bottom: 20 *$px
+                &:after
+                    content: ''
+                    position: absolute
+                    left: 40 *$px
+                    bottom: 0
+                    transform: translateY(100%) skew(30deg,0)
+                    width: 0
+                    height: 0
+                    border: 8 *$px solid transparent
+                    border-top-color: $color_purple
+                    border-right-color: $color_purple
+        &-block-2
+            &-item
+                padding-top: 4 *$px
+                background: $color_pink
+            &-goods
+                background: #fff
+                padding-bottom: 16 *$px
+                color: $color_black_title
+                position: relative
+                overflow: hidden
+                &-item
+                    float: left
+                    width: 50%
+                    padding: 0 10 *$px
+                    &-title
+                        margin: 15 *$px auto 0
+                        width: 8em
+                        line-height: 1.2
+                img
+                    max-width: 100%
+                    border-bottom: 1px solid $color_gray_border
+                &-icon-plus
+                    width: 25 *$px
+                    height: 25 *$px
+                    margin: auto
+                    position: absolute
+                    z-index: 1
+                    left: 0
+                    right: 0
+                    bottom: 32 *$px
+                    &:before,
+                    &:after
+                        content: ''
+                        position: absolute
+                        left: 0
+                        right: 0
+                        top: 0
+                        bottom: 0
+                        margin: auto
+                    &:before
+                        width: 3 *$px
+                        height: 100%
+                    &:after
+                        height: 3 *$px
+                        width: 100%
+
+                    &.bg-cyan
+                        &:before,
+                        &:after
+                            background: $color_cyan
+                    &.bg-orchid
+                        &:before,
+                        &:after
+                            background: $color_orchid
+                    &.bg-orange
+                        &:before,
+                        &:after
+                            background: $color_orange
+                    &.bg-green
+                        &:before,
+                        &:after
+                            background: $color_green
+                    &.bg-purple
+                        &:before,
+                        &:after
+                            background: $color_purple
+
+
+        &-block-3
+            background: $color_pink
+
+            &-item
+                float: left
+                width: 50%
+                padding: 6 *$px 5 *$px
+                &-inner
+                    padding: 0 0 10 *$px
+                    background: #fff
+                    overflow: hidden
+                img
+                    max-width: 100%
+                    border-bottom: 1px solid $color_gray_border
+
+
+        &-block-4
+            padding-bottom: 15 *$px
+            background: $color_pink

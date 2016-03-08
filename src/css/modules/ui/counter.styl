@@ -1,0 +1,42 @@
+/***
+* Widget: Counter
+* Author: Remiel.
+***/
+.counter
+    width: 156 *$px
+    line-height: 36 *$px
+    clearfix()
+
+    input
+        width: 60 *$px
+        height: 36 *$px
+        margin: 0 10 *$px
+        float: left
+        text-align: center
+        color: $color_gray_summary
+        border: 1px solid $color_gray_border
+        &:focus
+            border-color: $color_gold_hover
+
+
+    .icon
+        float: left
+        color: $color_icon
+        font-size: 24 *$px
+        width: 38 *$px
+        text-align: center
+
+        &:hover
+            color: $color_gold_hover
+        &:active
+            color: $color_gold
+
+        &.disabled
+            opacity: .5
+            cursor: default!important
+            &:hover
+                color: $color_icon
+            &:active
+                color: $color_icon
+
+
